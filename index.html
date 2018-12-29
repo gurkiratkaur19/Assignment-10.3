@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            class Dog{
+                constructor(name){
+                    this.name = name;
+                }
+                speak(){
+                    return "Woof";
+                }
+            }
+
+            class Labrador extends Dog{
+                constructor(color,breedWeight){
+                    super("Labrador");
+                    this.color = color;
+                    this.breedWeight = breedWeight;
+                    
+                }
+                speak(){
+                    return "Labrador says "+super.speak();
+                }
+            }
+
+            var labObj = new Labrador("red" , 58);
+            console.log(labObj.speak());
+        </script>
+    </body>
+</html>
